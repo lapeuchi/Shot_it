@@ -6,6 +6,15 @@ public class Define
 {
     public enum Gun
     {
+        Pistole,
+        Rifle,
+        SR
+    }
 
+    public enum Mode
+    {
+        None,
+        Simple,
+        Tracking
     }
 }
