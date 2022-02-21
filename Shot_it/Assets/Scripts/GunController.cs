@@ -51,7 +51,11 @@ public class GunController : MonoBehaviour
                 else
                 {
                     if(GameManager.instance.isGaming == true)
+                    {
                         GameManager.instance.life--;
+                        AudioManager.instance.PlayMiss();
+                    }
+                        
                 }
                 StartCoroutine(CoolDown(speed));
             }

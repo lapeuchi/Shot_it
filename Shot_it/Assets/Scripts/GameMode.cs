@@ -12,7 +12,7 @@ public class GameMode : MonoBehaviour
 
     private void Awake()
     {
-        target = Resources.Load<GameObject>("Prefabs/Target");        
+        target = Resources.Load<GameObject>("Prefabs/Target");
     }
 
     private void Start()
@@ -50,6 +50,7 @@ public class GameMode : MonoBehaviour
     {
         yield return new WaitUntil(() => GameManager.instance.isGaming == true);
         GameManager.instance.life = maxLife;
+        TargetController.best = 1000f;
         switch (GameManager.instance.curMode)
         {
             case Define.Mode.Simple:

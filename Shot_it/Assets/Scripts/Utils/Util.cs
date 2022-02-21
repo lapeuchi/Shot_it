@@ -20,7 +20,6 @@ public class Util
         }
 
         GameObject go = Object.Instantiate(original, parent);
-        go.name = original.name;
         return go;
     }
 

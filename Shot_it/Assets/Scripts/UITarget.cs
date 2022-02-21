@@ -22,6 +22,13 @@ public class UITarget : MonoBehaviour
     {
         if (gameObject.GetComponent<TargetController>().isHit)
         {
+            if (startButton && GameManager.instance.curMode == Define.Mode.None)
+            {
+                Debug.Log("모드 선택");
+                StartCoroutine(UI.Notice("시작 전 모드를 선택해 주세요."));
+            }
+               
+
             if (startButton && GameManager.instance.curMode != Define.Mode.None)
             {
                 Debug.Log("GameStart");
